@@ -124,6 +124,8 @@
 		83E8FF98196657C1005F928D /* BitCoinService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinService.swift; sourceTree = "<group>"; };
 		83E8FF99196657C1005F928D /* BitCoinStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCoinStats.swift; sourceTree = "<group>"; };
 		83E8FF9B196657C1005F928D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		BE3554261B08523B009C98CC /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BE3554271B08523B009C98CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,8 @@
 		07DA61591965E33100E97CC3 = {
 			isa = PBXGroup;
 			children = (
+				BE3554261B08523B009C98CC /* LICENSE.md */,
+				BE3554271B08523B009C98CC /* README.md */,
 				07DA61641965E33100E97CC3 /* Crypticker */,
 				07DA61771965E33100E97CC3 /* CryptickerTests */,
 				07DA618A1965E3A600E97CC3 /* CryptoCurrencyKit */,
