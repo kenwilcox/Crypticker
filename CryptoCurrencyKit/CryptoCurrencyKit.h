@@ -34,3 +34,4 @@ FOUNDATION_EXPORT const unsigned char CryptoCurrencyKitVersionString[];
 
 #import <CryptoCurrencyKit/JBChartView.h>
 #import <CryptoCurrencyKit/JBLineChartView.h>
+#import <CryptoCurrencyKit/JBBarChartView.h>

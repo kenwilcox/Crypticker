@@ -37,8 +37,8 @@ public class BitCoinPrice : NSObject, NSCoding, Printable {
     }
     
     public required init(coder aDecoder: NSCoder)  {
-        value = aDecoder.decodeObjectForKey("value") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+        value = aDecoder.decodeObjectForKey("value") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {

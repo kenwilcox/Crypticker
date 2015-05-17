@@ -54,12 +54,12 @@ class BitCoinService {
         }
         
         let statsUrl = NSURL(string: "https://blockchain.info/stats?format=json")
-        let request = NSURLRequest(URL: statsUrl)
+        let request = NSURLRequest(URL: statsUrl!)
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
                 var jsonError: NSError?
                 if (jsonError == nil) {
-                    let statsDictionary = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error: &jsonError) as NSDictionary
+                    let statsDictionary = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error: &jsonError) as! NSDictionary
                     let stats: BitCoinStats = BitCoinStats(fromJSON: JSONValue(statsDictionary))
                     self.cacheStats(stats)
                     completion(stats: stats, error: nil)
@@ -81,14 +81,14 @@ class BitCoinService {
         }
         
         let pricesUrl = NSURL(string: "https://blockchain.info/charts/market-price?timespan=30days&format=json")
-        let request = NSURLRequest(URL: pricesUrl);
+        let request = NSURLRequest(URL: pricesUrl!);
         let task = session.dataTaskWithRequest(request) {[unowned self] data, response, error in
             if error == nil {
                 var jsonError: NSError?
-                let pricesDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError) as NSDictionary
+                let pricesDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)as! NSDictionary
                 if (jsonError == nil) {
                     let json = JSONValue(pricesDictionary)
-                    let priceValues = pricesDictionary["values"] as Array<NSDictionary>
+                    let priceValues = pricesDictionary["values"] as! Array<NSDictionary>
                     var prices = [BitCoinPrice]()
                     for priceDictionary in priceValues {
                         let price = BitCoinPrice(fromJSON: JSONValue(priceDictionary))

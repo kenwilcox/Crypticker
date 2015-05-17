@@ -38,8 +38,8 @@ public class BitCoinStats : NSObject, NSCoding, Printable {
     }
     
     public required init(coder aDecoder: NSCoder) {
-        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as NSNumber
-        time = aDecoder.decodeObjectForKey("time") as NSDate
+        marketPriceUSD = aDecoder.decodeObjectForKey("marketPriceUSD") as! NSNumber
+        time = aDecoder.decodeObjectForKey("time") as! NSDate
     }
     
     public func encodeWithCoder(aCoder: NSCoder)  {
